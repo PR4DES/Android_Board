@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Board</string>
+    <string name="add_recipe_intro">Share Your Own Recipe!</string>
 </resources>

@@ -10,10 +10,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText login_id, login_pw;
+    EditText login_id;
+    EditText login_pw;
     Button login_b;
-
-    TextView t = (TextView)findViewById(R.id.login_alarm);
+    TextView t;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,18 +24,20 @@ public class MainActivity extends AppCompatActivity {
         login_id = (EditText)findViewById(R.id.login_id);
         login_pw = (EditText)findViewById(R.id.login_password);
         login_b = (Button)findViewById(R.id.login_button);
+        t = (TextView)findViewById(R.id.login_alarm);
+
         login_b.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 t.setText("");
-                if(login_id.getText().toString()=="123") {
-                    if(login_pw.getText().toString()=="321") {
+                if(login_id.getText().toString().equals("a")) {
+                    if(login_pw.getText().toString().equals("a")) {
                         Intent intent = new Intent(MainActivity.this, searchActivity.class);
                         startActivity(intent);
                     }else {
-                        t.setText("wrong password!");
+                        t.setText("pw = "+login_pw.getText().toString());
                     }
                 } else {
-                    t.setText("wrong id!");
+                    t.setText("id = "+login_id.getText().toString());
                 }
             }
         });
