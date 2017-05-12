@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, searchActivity.class);
                         startActivity(intent);
                     }else {
-                        t.setText("pw = "+login_pw.getText().toString());
+                        t.setText("wrong password");
                     }
                 } else {
-                    t.setText("id = "+login_id.getText().toString());
+                    t.setText("wrong id");
                 }
             }
         });
