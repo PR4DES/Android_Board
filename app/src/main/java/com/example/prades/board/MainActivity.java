@@ -21,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
+        if( getIntent().getBooleanExtra("Exit me", false)){
+            finish();
+        }
+
         login_id = (EditText)findViewById(R.id.login_id);
         login_pw = (EditText)findViewById(R.id.login_password);
         login_b = (Button)findViewById(R.id.login_button);
