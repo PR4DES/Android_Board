@@ -13,8 +13,6 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText login_id;
-    EditText login_pw;
     Button login_b;
 
     @Override
@@ -27,13 +25,10 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        login_id = (EditText)findViewById(R.id.login_id);
-        login_pw = (EditText)findViewById(R.id.login_password);
         login_b = (Button)findViewById(R.id.login_button);
-
         login_b.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TypeActivity.class);
+                Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
                 startActivity(intent);
             }
         });
